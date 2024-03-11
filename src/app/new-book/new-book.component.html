@@ -1,0 +1,37 @@
+<p>new-book works!</p>
+
+{{bookForm.value | json}}
+<div class="p-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+
+
+          <form [formGroup]="bookForm" (ngSubmit)="saveBook()">
+            <div class="mb-3">
+              <label class="form-label" for="name">Name:</label>
+              <input class="form-control"  type="text" formControlName="name" id="name">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="author">Author:</label>
+              <input class="form-control" type="text" formControlName="author" id="author">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="price">Price:</label>
+              <input class="form-control" type="text" formControlName="price" id="price">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="checked">Checked:</label>
+              <input class="form-check-input" type="checkbox" formControlName="checked" id="checked">
+            </div>
+
+            <button class="btn btn-success" type="submit" [disabled]="bookForm.invalid">create book</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

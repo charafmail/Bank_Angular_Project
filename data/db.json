@@ -1,0 +1,67 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "Morning miracle",
+      "author": "Hal Elrod",
+      "price": "75 DH",
+      "checked": true
+    },
+    {
+      "id": 2,
+      "name": "Atomic Habits",
+      "author": "Jamse Clear",
+      "price": "80 DH",
+      "checked": true
+    },
+    {
+      "id": 3,
+      "name": "Rich Dad PoorDad",
+      "author": "Robert Kiyosaki",
+      "price": "70 DH",
+      "checked": false
+    },
+    {
+      "id": 4,
+      "name": "12 Rules For Life",
+      "author": "Jordan B Peterson",
+      "price": "120 DH",
+      "checked": false
+    },
+    {
+      "name": "testo",
+      "author": "testo",
+      "price": "500",
+      "checked": false,
+      "id": 5
+    },
+    {
+      "name": "test",
+      "author": "test",
+      "price": 0,
+      "checked": "",
+      "id": 6
+    },
+    {
+      "name": "test",
+      "author": "test",
+      "price": 0,
+      "checked": true,
+      "id": 7
+    },
+    {
+      "name": "test",
+      "author": "test",
+      "price": 0,
+      "checked": false,
+      "id": 8
+    },
+    {
+      "name": "sdsd",
+      "author": "sdsd",
+      "price": 0,
+      "checked": "",
+      "id": 9
+    }
+  ]
+}

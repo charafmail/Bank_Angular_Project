@@ -1,0 +1,79 @@
+
+
+
+<div class="p-3">
+    <div class="card">
+
+      <div class="card-body">
+        <div class="card-body">
+
+          <input class="p-1" type="text" [(ngModel)]="name">
+          <button class="btn btn-outline-success ms-2" (click)="searchBook()">
+            <i class="bi bi-search" ></i>
+          </button>
+
+        </div>
+      </div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Checked</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+
+            </thead>
+            <tbody>
+            <tr *ngFor="let book of books">
+                <td>
+                    {{book.name}}
+                </td>
+                <td>
+                    {{book.author}}
+                </td>
+                <td>
+                    {{book.price}}
+                </td>
+
+                <td>
+                    <button (click)="checkedBook(book)" [class]="book.checked? 'btn btn-success':'btn btn-outline-success'">
+                       <i [class]="book.checked? 'btn bi-check':'btn bi-x'"></i>
+                    </button>
+                </td>
+
+              <td>
+                <button (click)="editBook(book)" [class]="'btn btn-outline-light'">
+                  <i [class]="'btn bi-pencil'"></i>
+                </button>
+              </td>
+
+                <td *ngIf="this.appStateService.authSate.roles.includes('ADMIN')">
+                  <button (click)="deleteBook(book)" [class]="'btn btn-outline-danger'">
+                    <i [class]="'bi bi-trash'"></i>
+                  </button>
+                </td>
+            </tr>
+
+            </tbody>
+
+        </table>
+      <ul class="nav nav-pills">
+        <li *ngFor="let page of [].constructor(this.totalPages); let i=index">
+
+          <a (click)="changePage(i+1)" [class]= "(this.currentPage==i+1) ? 'btn btn-success m-1':'btn btn-outline-success m-1'">
+            {{i+1}}
+
+          </a>
+
+        </li>
+
+
+      </ul>
+
+    </div>
+</div>
+
+Part 4- Angular - Total Demo - Authentication - 2:26:00 : protection des routes par les gwards

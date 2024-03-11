@@ -1,0 +1,19 @@
+<nav>
+  <ul class="nav nav-pills">
+    <li *ngFor="let action of actions" class="m-2 p-1">
+      <button (click)="setCurrentAction(action)" routerLink="{{action.route}}"
+              [class]="action==currentAction?'btn btn-success':'btn btn-outline-success'">SDC
+        {{action.title}}
+        <i class="bi bi-{{action.icon}}"></i>
+      </button>
+    </li>
+    <li *ngIf="(subjectService.status$|async) =='LOADING'  " class="m-2 p-1" >
+      <div class="spinner-border text-success m-1" role="status">
+      </div>
+    </li>
+  </ul>
+
+</nav>
+
+
+
